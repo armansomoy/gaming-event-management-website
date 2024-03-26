@@ -30,7 +30,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-200  py-5">
+    <div className="navbar  container py-5">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -66,7 +66,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <div>
+          <div className="flex">
             {" "}
             <div
               tabIndex={0}
