@@ -1,13 +1,16 @@
 import React, { useContext } from "react";
 import Navbar from "../../shared/Navbar";
 import Footer from "../../shared/Footer";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const { userLogIn } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  console.log(location);
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -21,6 +24,7 @@ const Login = () => {
         console.log(res.user);
         toast("Your Successfully Loged In");
         e.target.reset();
+        navigate(location?.state ? location.state : "/");
       })
       .catch((err) => console.log(err));
   };

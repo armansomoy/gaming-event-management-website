@@ -7,7 +7,7 @@ const LatestEvents = ({ event }) => {
   return (
     <div className="card lg:card-side bg-base-100 shadow-xl m-2 h-76">
       <figure>
-        <img className="h-full w-56" src={image} alt="Album" />
+        <img className="h-full w-60" src={image} alt="Album" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
