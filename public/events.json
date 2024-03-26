@@ -1,0 +1,126 @@
+[
+  {
+    "id": 1,
+    "name": "E3 Expo",
+    "image": "https://source.unsplash.com/featured/?gaming",
+    "price": 620,
+    "event_date": "2024-06-12",
+    "short_description": "The premier event for computer, video game, and related products.",
+    "long_description": "The Electronic Entertainment Expo (E3) is a premier trade event for the video game industry. At E3, major video game publishers showcase upcoming games and hardware, attracting media coverage and industry attention. It is held annually in Los Angeles, California.",
+    "specifications": {
+      "venue": "Los Angeles Convention Center",
+      "attendees": "Industry professionals, media, and gaming enthusiasts",
+      "featured_platforms": ["PlayStation", "Xbox", "Nintendo", "PC"],
+      "organizer": "Entertainment Software Association (ESA)"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Gamescom",
+    "image": "https://source.unsplash.com/featured/?gaming",
+    "price": 60,
+    "event_date": "2024-08-25",
+    "short_description": "The world's largest gaming event.",
+    "long_description": "Gamescom is the largest gaming event in the world, attracting hundreds of thousands of visitors each year. It features exhibitions, panel discussions, and hands-on demos of upcoming games from both major publishers and indie developers.",
+    "specifications": {
+      "venue": "Koelnmesse, Cologne, Germany",
+      "attendees": "Gamers, developers, publishers, and industry professionals",
+      "featured_platforms": ["PC", "PlayStation", "Xbox", "Nintendo"],
+      "organizer": "Koelnmesse GmbH"
+    }
+  },
+  {
+    "id": 3,
+    "name": "BlizzCon",
+    "image": "https://source.unsplash.com/featured/?gaming",
+    "price": 199.99,
+    "event_date": "2024-10-30",
+    "short_description": "Celebrating all things Blizzard Entertainment.",
+    "long_description": "BlizzCon is an annual gaming convention held by Blizzard Entertainment to celebrate its major franchises, including Warcraft, StarCraft, Diablo, Hearthstone, and Overwatch. The event features announcements, panels, tournaments, and community events.",
+    "specifications": {
+      "venue": "Anaheim Convention Center, Anaheim, California",
+      "attendees": "Fans of Blizzard Entertainment games",
+      "featured_games": ["World of Warcraft", "Overwatch", "Diablo"],
+      "organizer": "Blizzard Entertainment"
+    }
+  },
+  {
+    "id": 4,
+    "name": "PAX East",
+    "image": "https://source.unsplash.com/featured/?gaming",
+    "price": 60,
+    "event_date": "2024-04-08",
+    "short_description": "Celebrating gaming culture.",
+    "long_description": "PAX East is a gaming convention dedicated to celebrating gaming culture and community. It features panels, exhibitions, tournaments, and opportunities for gamers to connect with each other.",
+    "specifications": {
+      "venue": "Boston Convention and Exhibition Center, Boston, Massachusetts",
+      "attendees": "Gamers, developers, publishers, and industry professionals",
+      "featured_platforms": ["PC", "PlayStation", "Xbox", "Nintendo"],
+      "organizer": "Penny Arcade, ReedPop"
+    }
+  },
+  {
+    "id": 5,
+    "name": "DreamHack",
+    "image": "https://source.unsplash.com/featured/?gaming",
+    "price": 80,
+    "event_date": "2024-11-08",
+    "short_description": "The world's largest digital festival.",
+    "long_description": "DreamHack is the world's largest digital festival, featuring esports tournaments, LAN parties, cosplay, and gaming exhibitions. It attracts gamers and enthusiasts from around the globe.",
+    "specifications": {
+      "venue": "Various locations worldwide",
+      "attendees": "Gamers, esports enthusiasts, cosplayers",
+      "featured_games": [
+        "Counter-Strike: Global Offensive",
+        "League of Legends",
+        "Dota 2"
+      ],
+      "organizer": "DreamHack AB"
+    }
+  },
+  {
+    "id": 6,
+    "name": "The International",
+    "image": "https://source.unsplash.com/featured/?gaming",
+    "price": 100,
+    "event_date": "2024-07-20",
+    "short_description": "The pinnacle of Dota 2 esports.",
+    "long_description": "The International is an annual Dota 2 esports tournament hosted by Valve Corporation. It features the world's best Dota 2 teams competing for millions of dollars in prize money.",
+    "specifications": {
+      "venue": "TBD",
+      "attendees": "Esports fans, Dota 2 players",
+      "prize_pool": "$40 million (2023)",
+      "organizer": "Valve Corporation"
+    }
+  },
+  {
+    "id": 7,
+    "name": "QuakeCon",
+    "image": "https://source.unsplash.com/featured/?gaming",
+    "price": 20,
+    "event_date": "2024-08-07",
+    "short_description": "The ultimate celebration of id Software and its games.",
+    "long_description": "QuakeCon is an annual gaming convention dedicated to id Software and its games, including the Quake, Doom, and Wolfenstein series. The event features tournaments, panels, and exhibitions.",
+    "specifications": {
+      "venue": "Gaylord Texan Resort & Convention Center, Grapevine, Texas",
+      "attendees": "Fans of id Software games",
+      "featured_games": ["Quake", "Doom", "Wolfenstein"],
+      "organizer": "Bethesda Softworks"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Tokyo Game Show",
+    "image": "https://source.unsplash.com/featured/?gaming",
+    "price": 3000,
+    "event_date": "2024-09-12",
+    "short_description": "Asia's largest gaming event.",
+    "long_description": "Tokyo Game Show is Asia's largest gaming event, showcasing the latest trends and developments in the gaming industry. It features exhibitions, panels, and hands-on demos of upcoming games.",
+    "specifications": {
+      "venue": "Makuhari Messe, Chiba, Japan",
+      "attendees": "Gamers, developers, publishers, and industry professionals",
+      "featured_platforms": ["PlayStation", "Nintendo"],
+      "organizer": "Computer Entertainment Supplier's Association (CESA)"
+    }
+  }
+]
