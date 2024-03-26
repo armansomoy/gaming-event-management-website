@@ -1,15 +1,34 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from '../assets/logo.png'
+import logo from "../assets/logo.png";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
-    const navLink = <>
-    <li><NavLink to='/'>Home</NavLink></li>
-    <li><NavLink to='/events'>Events</NavLink></li>
-    <li><NavLink to='/blogs'>Blogs</NavLink></li>
-    <li><NavLink to='/login'>Login</NavLink></li>
-    <li><NavLink to='/register'>Register</NavLink></li>
+  const { user, userSignOut } = useContext(AuthContext);
+
+  const handleSignOut = () => {
+    userSignOut().then().catch();
+  };
+
+  const navLink = (
+    <>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/events">Events</NavLink>
+      </li>
+      <li>
+        <NavLink to="/blogs">Blogs</NavLink>
+      </li>
+      <li>
+        <NavLink to="/login">Login</NavLink>
+      </li>
+      <li>
+        <NavLink to="/register">Register</NavLink>
+      </li>
     </>
+  );
   return (
     <div className="navbar bg-base-200  py-5">
       <div className="navbar-start">
@@ -37,20 +56,39 @@ const Navbar = () => {
             {navLink}
           </ul>
         </div>
-        <Link className=" bg-[#0F1B33] p-3"> <img src={logo} alt="" /> </Link>
+        <Link className=" bg-[#0F1B33] p-3">
+          {" "}
+          <img src={logo} alt="" />{" "}
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {navLink}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{navLink}</ul>
       </div>
       <div className="navbar-end">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-        </div>
-      </div>
-        <Link className="btn">login</Link>
+        {user ? (
+          <div>
+            {" "}
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
+            >
+              <div className="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </div>
+            </div>
+            <Link className="btn" onClick={handleSignOut}>Logout</Link>
+          </div>
+        ) : (
+          <div>
+            <Link to="/login" className="btn">
+              login
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
