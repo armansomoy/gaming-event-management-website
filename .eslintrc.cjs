@@ -1,7 +1,5 @@
 module.exports = {
-  daisyui: {
-    themes: ["light", "dark", "cupcake"],
-  },
+  
   root: true,
   env: { browser: true, es2020: true, node: true },
   extends: [
