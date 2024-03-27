@@ -70,11 +70,11 @@ const Login = () => {
             </form>
             <label className="label text-center m-auto mb-2">
               <Link
-                to="/login"
+                to="/register"
                 className="label-text-alt link link-hover font-semibold text-gray-500"
               >
                 Didn't Have An Account?{" "}
-                <span className="text-blue-600">Login!</span>
+                <span className="text-blue-600">Register!</span>
               </Link>
             </label>
           </div>

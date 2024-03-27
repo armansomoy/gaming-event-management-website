@@ -9,6 +9,7 @@ import Events from "../Pages/Events/Events";
 import Blogs from "../Pages/Blogs/Blogs";
 import EventDetails from "../Pages/EventDetails/EventDetails";
 import PrivateRoute from "./PrivateRoute";
+import Dashboard from "../Pages/Dashboard/Dashboard";
 
 const routes = createBrowserRouter([
   {
@@ -27,11 +28,7 @@ const routes = createBrowserRouter([
       },
       {
         path: "/events/:id",
-        element: (
-          <PrivateRoute>
-            <EventDetails></EventDetails>
-          </PrivateRoute>
-        ),
+        element: <EventDetails></EventDetails>,
         loader: () => fetch("/events.json"),
       },
       {
@@ -45,6 +42,15 @@ const routes = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/dashboard",
+        element: (
+          <PrivateRoute>
+            {" "}
+            <Dashboard></Dashboard>
+          </PrivateRoute>
+        ),
       },
     ],
   },

@@ -22,10 +22,7 @@ const Navbar = () => {
         <NavLink to="/blogs">Blogs</NavLink>
       </li>
       <li>
-        <NavLink to="/login">Login</NavLink>
-      </li>
-      <li>
-        <NavLink to="/register">Register</NavLink>
+        <NavLink to="/dashboard">Dashboard</NavLink>
       </li>
     </>
   );
@@ -74,13 +71,17 @@ const Navbar = () => {
               className="btn btn-ghost btn-circle avatar"
             >
               <div className="w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
+                <Link to='/dashboard'>
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  />
+                </Link>
               </div>
             </div>
-            <Link className="btn" onClick={handleSignOut}>Logout</Link>
+            <Link className="btn" onClick={handleSignOut}>
+              Logout
+            </Link>
           </div>
         ) : (
           <div>
