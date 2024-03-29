@@ -10,6 +10,7 @@ import Blogs from "../Pages/Blogs/Blogs";
 import EventDetails from "../Pages/EventDetails/EventDetails";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import BlogDetails from "../Pages/BlogDetails/BlogDetails";
 
 const routes = createBrowserRouter([
   {
@@ -34,6 +35,11 @@ const routes = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs></Blogs>,
+        loader: () => fetch("/news.json"),
+      },
+      {
+        path: "/blog/:id",
+        element: <BlogDetails></BlogDetails>,
         loader: () => fetch("/news.json"),
       },
       {

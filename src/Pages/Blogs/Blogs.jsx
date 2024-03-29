@@ -6,7 +6,6 @@ import Blog from '../Blog/Blog';
 
 const Blogs = () => {
     const news = useLoaderData();
-    console.log(news);
     return (
         <div >
             <Navbar></Navbar>
