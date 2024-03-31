@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const { userLogIn } = useContext(AuthContext);
+  const { userLogIn, userGoogleLogIn } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   console.log(location);
@@ -26,6 +26,12 @@ const Login = () => {
         e.target.reset();
         navigate(location?.state ? location.state : "/");
       })
+      .catch((err) => console.log(err));
+  };
+
+  const handleGoogleLogIn = () => {
+    userGoogleLogIn()
+      .then((res) => console.log(res.user))
       .catch((err) => console.log(err));
   };
 
@@ -68,6 +74,10 @@ const Login = () => {
                 <button className="btn btn-primary">Login</button>
               </div>
             </form>
+            <p className="text-center">Or</p>
+            <div className="form-control mt-6 mx-6" onClick={handleGoogleLogIn}>
+              <button className="btn btn-primary">Login With Google</button>
+            </div>
             <label className="label text-center m-auto mb-2">
               <Link
                 to="/register"
