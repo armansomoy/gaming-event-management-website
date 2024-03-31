@@ -7,11 +7,10 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
-  const { signUp } = useContext(AuthContext);
+  const { signUp, userGoogleLogIn, userGithubLogin } = useContext(AuthContext);
 
   const handleRegister = (e) => {
     e.preventDefault();
-    
 
     const name = e.target.name.value;
     const email = e.target.email.value;
@@ -29,6 +28,25 @@ const Register = () => {
         console.log(err);
       });
   };
+
+  const handleGoogleLogIn = () => {
+    userGoogleLogIn()
+      .then((res) => {
+        console.log(res.user);
+        toast("Your Successfully Loged In");
+      })
+      .catch((err) => console.log(err));
+  };
+
+  const handleGithubLogin = () => {
+    userGithubLogin()
+      .then((res) => {
+        console.log(res.user);
+        toast("Your Successfully Loged In");
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
     <div>
       <Navbar></Navbar>
@@ -92,6 +110,13 @@ const Register = () => {
                 <button className="btn btn-primary">Register</button>
               </div>
             </form>
+            <p className="text-center">Or</p>
+            <div className="form-control mt-6 mx-6" onClick={handleGoogleLogIn}>
+              <button className="btn btn-success">Register With Google</button>
+            </div>
+            <div className="form-control mt-6 mx-6" onClick={handleGithubLogin}>
+              <button className="btn btn-success">Register With Github</button>
+            </div>
             <label className="label text-center m-auto mb-2">
               <Link
                 to="/login"

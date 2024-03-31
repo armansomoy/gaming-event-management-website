@@ -32,7 +32,10 @@ const Login = () => {
 
   const handleGoogleLogIn = () => {
     userGoogleLogIn()
-      .then((res) => console.log(res.user))
+      .then((res) => {
+        console.log(res.user);
+        toast("Your Successfully Loged In");
+      })
       .catch((err) => console.log(err));
   };
 
@@ -40,6 +43,7 @@ const Login = () => {
     userGithubLogin()
       .then((res) => {
         console.log(res.user);
+        toast("Your Successfully Loged In");
       })
       .catch((err) => console.log(err));
   };

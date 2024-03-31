@@ -26,6 +26,8 @@ const Navbar = () => {
       </li>
     </>
   );
+
+  const defaultImg = 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg';
   return (
     <div className="navbar  container py-5">
       <div className="navbar-start">
@@ -74,7 +76,7 @@ const Navbar = () => {
                 <Link to='/dashboard'>
                   <img
                     alt="Tailwind CSS Navbar component"
-                    src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                    src={user.photoURL || defaultImg}
                   />
                 </Link>
               </div>
