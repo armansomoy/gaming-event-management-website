@@ -26,6 +26,7 @@ const routes = createBrowserRouter([
       {
         path: "/events",
         element: <Events></Events>,
+        loader: () => fetch("/events.json"),
       },
       {
         path: "/events/:id",
