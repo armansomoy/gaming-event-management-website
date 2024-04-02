@@ -8,7 +8,7 @@ const Footer = () => {
       <img src={logo} alt="" className="m-auto" />
       <p className="text-[#fff] pt-6">
         @2024 All Copywrite by{" "}
-        <Link to="https://besomoy.com/">besomoy.com</Link>{" "}
+        <Link target="_blank" to="https://besomoy.com/">besomoy.com</Link>{" "}
       </p>
     </div>
   );
